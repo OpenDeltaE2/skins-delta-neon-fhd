@@ -203,18 +203,18 @@
   </screen>
   <!-- -->
   <screen name="TopTemplate">
-  <eLabel position="0,0" size="1920,80" backgroundColor="background" transparent="1" />
-  <widget source="Title" render="Label" position="180,12" size="1000,64" backgroundColor="transparent" transparent="1" zPosition="1" font="Regular;36" valign="center" halign="left" />
-  <!-- Clock -->
-  <widget backgroundColor="background" font="Regular; 30" position="1320,12" render="Label" size="460,64" source="global.CurrentTime" transparent="1" valign="center">
-    <convert type="ClockToText">Format:%A, %d. %B %Y</convert>
-  </widget>
-  <widget backgroundColor="background" font="Regular;30" halign="center" position="1720,12" render="Label" size="180,64" source="global.CurrentTime" transparent="1" valign="center">
-    <convert type="ClockToText">Default</convert>
-  </widget>
-  <!-- Logos -->
-  <ePixmap pixmap="/usr/share/enigma2/logos/boxlogo.png" position="30,12" zPosition="2" size="136,64" transparent="1" alphatest="blend" />
-</screen>
+    <eLabel position="0,0" size="1920,80" backgroundColor="background" transparent="1" />
+    <widget source="Title" render="Label" position="180,12" size="1000,64" backgroundColor="transparent" transparent="1" zPosition="1" font="Regular;36" valign="center" halign="left" />
+    <!-- Clock -->
+    <widget backgroundColor="background" font="Regular; 30" position="1320,12" render="Label" size="460,64" source="global.CurrentTime" transparent="1" valign="center">
+      <convert type="ClockToText">Format:%A, %d. %B %Y</convert>
+    </widget>
+    <widget backgroundColor="background" font="Regular;30" halign="center" position="1720,12" render="Label" size="180,64" source="global.CurrentTime" transparent="1" valign="center">
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <!-- Logos -->
+    <ePixmap pixmap="/usr/share/enigma2/logos/boxlogo.png" position="30,12" zPosition="2" size="136,64" transparent="1" alphatest="blend" />
+  </screen>
   <screen name="BasicTemplate">
     <panel name="TopTemplate" />
     <panel name="ButtonTemplate" />
@@ -416,48 +416,6 @@
     <widget name="h_next" pixmap="buttons/key_next.png" zPosition="1" alphatest="blend" position="82,1031" size="52,38" />
   </screen>
   <!-- cf#_#rename -->
-  <screen name="wizard_rc_templateNew">
-    <widget name="rc" pixmaps="rc.png,rcold.png" position="1475,250" zPosition="10" size="154,500" alphaTest="blend" transparent="0" />
-    <widget alphaTest="blend" name="indicatorU0" pixmap="skin_default/yellow_circle23x23.png" position="1425,210" offset="11,11" size="23,23" zPosition="11" />
-    <widget alphaTest="blend" name="indicatorU1" pixmap="skin_default/yellow_circle23x23.png" position="1425,210" offset="11,11" size="23,23" zPosition="11" />
-    <widget alphaTest="blend" name="indicatorU2" pixmap="skin_default/yellow_circle23x23.png" position="1425,210" offset="11,11" size="23,23" zPosition="11" />
-    <widget alphaTest="blend" name="indicatorU3" pixmap="skin_default/yellow_circle23x23.png" position="1425,210" offset="11,11" size="23,23" zPosition="11" />
-    <widget alphaTest="blend" name="indicatorU4" pixmap="skin_default/yellow_circle23x23.png" position="1425,210" offset="11,11" size="23,23" zPosition="11" />
-    <widget alphaTest="blend" name="indicatorU5" pixmap="skin_default/yellow_circle23x23.png" position="1425,210" offset="11,11" size="23,23" zPosition="11" />
-    <widget alphaTest="blend" name="indicatorU6" pixmap="skin_default/yellow_circle23x23.png" position="1425,210" offset="11,11" size="23,23" zPosition="11" />
-    <widget alphaTest="blend" name="indicatorU7" pixmap="skin_default/yellow_circle23x23.png" position="1425,210" offset="11,11" size="23,23" zPosition="11" />
-    <widget alphaTest="blend" name="indicatorU8" pixmap="skin_default/yellow_circle23x23.png" position="1425,210" offset="11,11" size="23,23" zPosition="11" />
-    <widget alphaTest="blend" name="indicatorU9" pixmap="skin_default/yellow_circle23x23.png" position="1425,210" offset="11,11" size="23,23" zPosition="11" />
-    <widget alphaTest="blend" name="indicatorU10" pixmap="skin_default/yellow_circle23x23.png" position="1425,210" offset="11,11" size="23,23" zPosition="11" />
-    <widget alphaTest="blend" name="indicatorU11" pixmap="skin_default/yellow_circle23x23.png" position="1425,210" offset="11,11" size="23,23" zPosition="11" />
-    <widget alphaTest="blend" name="indicatorU12" pixmap="skin_default/yellow_circle23x23.png" position="1425,210" offset="11,11" size="23,23" zPosition="11" />
-    <widget alphaTest="blend" name="indicatorU13" pixmap="skin_default/yellow_circle23x23.png" position="1425,210" offset="11,11" size="23,23" zPosition="11" />
-    <widget alphaTest="blend" name="indicatorU14" pixmap="skin_default/yellow_circle23x23.png" position="1425,210" offset="11,11" size="23,23" zPosition="11" />
-    <widget alphaTest="blend" name="indicatorU15" pixmap="skin_default/yellow_circle23x23.png" position="1425,210" offset="11,11" size="23,23" zPosition="11" />
-    <widget alphaTest="blend" name="indicatorL0" pixmap="skin_default/yellow_circle23x23.png" position="1425,210" offset="11,11" size="23,23" zPosition="11" />
-    <widget alphaTest="blend" name="indicatorL1" pixmap="skin_default/yellow_circle23x23.png" position="1425,210" offset="11,11" size="23,23" zPosition="11" />
-    <widget alphaTest="blend" name="indicatorL2" pixmap="skin_default/yellow_circle23x23.png" position="1425,210" offset="11,11" size="23,23" zPosition="11" />
-    <widget alphaTest="blend" name="indicatorL3" pixmap="skin_default/yellow_circle23x23.png" position="1425,210" offset="11,11" size="23,23" zPosition="11" />
-    <widget alphaTest="blend" name="indicatorL4" pixmap="skin_default/yellow_circle23x23.png" position="1425,210" offset="11,11" size="23,23" zPosition="11" />
-    <widget alphaTest="blend" name="indicatorL5" pixmap="skin_default/yellow_circle23x23.png" position="1425,210" offset="11,11" size="23,23" zPosition="11" />
-    <widget alphaTest="blend" name="indicatorL6" pixmap="skin_default/yellow_circle23x23.png" position="1425,210" offset="11,11" size="23,23" zPosition="11" />
-    <widget alphaTest="blend" name="indicatorL7" pixmap="skin_default/yellow_circle23x23.png" position="1425,210" offset="11,11" size="23,23" zPosition="11" />
-    <widget alphaTest="blend" name="indicatorL8" pixmap="skin_default/yellow_circle23x23.png" position="1425,210" offset="11,11" size="23,23" zPosition="11" />
-    <widget alphaTest="blend" name="indicatorL9" pixmap="skin_default/yellow_circle23x23.png" position="1425,210" offset="11,11" size="23,23" zPosition="11" />
-    <widget alphaTest="blend" name="indicatorL10" pixmap="skin_default/yellow_circle23x23.png" position="1425,210" offset="11,11" size="23,23" zPosition="11" />
-    <widget alphaTest="blend" name="indicatorL11" pixmap="skin_default/yellow_circle23x23.png" position="1425,210" offset="11,11" size="23,23" zPosition="11" />
-    <widget alphaTest="blend" name="indicatorL12" pixmap="skin_default/yellow_circle23x23.png" position="1425,210" offset="11,11" size="23,23" zPosition="11" />
-    <widget alphaTest="blend" name="indicatorL13" pixmap="skin_default/yellow_circle23x23.png" position="1425,210" offset="11,11" size="23,23" zPosition="11" />
-    <widget alphaTest="blend" name="indicatorL14" pixmap="skin_default/yellow_circle23x23.png" position="1425,210" offset="11,11" size="23,23" zPosition="11" />
-    <widget alphaTest="blend" name="indicatorL15" pixmap="skin_default/yellow_circle23x23.png" position="1425,210" offset="11,11" size="23,23" zPosition="11" />
-  </screen>
-  <screen name="wizard_rc_template">
-    <widget name="rc" position="955,100" size="154,500" pixmaps="skin_default/rc.png,skin_default/rcold.png" zPosition="10" alphaTest="blend" />
-    <widget name="arrowdown" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphaTest="blend" />
-    <widget name="arrowdown2" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphaTest="blend" />
-    <widget name="arrowup" position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png" zPosition="11" alphaTest="blend" />
-    <widget name="arrowup2" position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png" zPosition="11" alphaTest="blend" />
-  </screen>
   <!-- Volume -->
   <screen backgroundColor="transpDark" flags="wfNoBorder" name="Volume" position="185,30" size="1550,40" title="Volume">
     <widget backgroundColor="background" font="Regular;30" halign="center" position="1442,3" render="VolumeText" size="60,35" source="global.CurrentTime" zPosition="4" foregroundColor="white" transparent="1" />
@@ -1829,118 +1787,11 @@
     <panel name="PigTemplate" />
     <widget name="filelist" position="45,100" size="1110,870" itemHeight="38" font="Regular;28" backgroundColor="darkgrey" zPosition="3" transparent="1" scrollbarMode="showOnDemand" scrollbarWidth="6" />
   </screen>
-  <!-- Extra margin for wizard, never know how bad the TV is... -->
-  <screen name="WizardMarginsTemplate">
-    <panel position="left" size="10%,*" />
-    <panel position="right" size="8%,*" />
-    <panel position="top" size="8%,*" />
-    <panel position="bottom" size="10%,*" />
-  </screen>
-  <!-- Start Wizard -->
-  <screen name="RemoteControlTemplate">
-    <panel position="right" size="154,*">
-      <panel position="top" size="*,50" />
-      <widget name="rc" pixmaps="rc.png,rcold.png" position="top" zPosition="10" size="154,500" alphatest="blend" />
-      <widget name="arrowdown" pixmap="arrowdown.png" position="0,0" zPosition="11" size="37,70" transparent="1" alphatest="blend" />
-      <widget name="arrowdown2" pixmap="arrowdown.png" position="0,0" zPosition="11" size="37,70" transparent="1" alphatest="blend" />
-      <widget name="arrowup" pixmap="arrowup.png" position="-100,-100" zPosition="11" size="37,70" transparent="1" alphatest="blend" />
-      <widget name="arrowup2" pixmap="arrowup.png" position="-100,-100" zPosition="11" size="37,70" transparent="1" alphatest="blend" />
-    </panel>
-  </screen>
-  <screen name="WizardPictureLangTemplate">
-    <panel position="top" size="*,50" />
-    <panel position="top" size="*,50">
-      <ePixmap pixmap="buttons/red.png" position="left" zPosition="0" size="50,34" transparent="1" alphatest="blend" />
-      <widget name="languagetext" position="0,0" size="1920,1080" font="Regular;34" />
-    </panel>
-  </screen>
   <!-- it's the same screen... -->
   <screen name="StartWizard" position="0,0" size="1920,1080" flags="wfNoBorder">
     <panel name="Background" />
     <panel name="DefaultWizard" />
   </screen>
-  <!-- Default wizard -->
-  <screen name="DefaultWizard" position="0,0" size="1920,1080" flags="wfNoBorder">
-    <panel name="Background" />
-    <panel name="WizardMarginsTemplate" />
-    <panel name="WizardPictureLangTemplate" />
-    <panel name="RemoteControlTemplate" />
-    <panel position="left" size="10,*" />
-    <panel position="right" size="10,*" />
-    <panel position="0,0" size="1920,1080">
-      <widget name="text" position="top" size="*,400" font="Regular;34" valign="center" />
-      <widget position="bottom" size="*,50" />
-      <panel position="fill" layout="stack">
-        <widget source="list" render="Listbox" position="0,0" size="1920,1080" scrollbarMode="showOnDemand" scrollbarWidth="6">
-          <convert type="TemplatedMultiContent">
-						{"template": [ MultiContentEntryText(pos = (0,0),size = (1035,42),flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER,text = 0) ],
-						"fonts": [gFont("Regular",34)],
-						"itemHeight": 42 }
-					</convert>
-        </widget>
-        <widget name="config" position="0,0" size="1300,502" zPosition="1" itemHeight="38" font="Regular;28" scrollbarMode="showOnDemand" scrollbarWidth="6" transparent="1" />
-      </panel>
-    </panel>
-  </screen>
-  <!-- Video wizard -->
-  <screen name="VideoWizard" position="0,0" size="1920,1080" flags="wfNoBorder">
-    <panel name="Background" />
-    <panel name="WizardMarginsTemplate" />
-    <panel name="WizardPictureLangTemplate" />
-    <panel name="RemoteControlTemplate" />
-    <panel position="left" size="10,*" />
-    <panel position="right" size="10,*" />
-    <panel position="0,0" size="1920,1080">
-      <widget name="text" position="top" size="*,400" font="Regular;34" valign="center" />
-      <panel position="0,0" size="1920,1080">
-        <panel position="left" size="150,*">
-          <widget name="portpic" position="top" zPosition="10" size="150,150" transparent="1" alphatest="on" />
-        </panel>
-        <panel position="0,0" size="1920,1080" layout="stack">
-          <widget source="list" render="Listbox" position="0,0" size="1920,1080" font="Regular;34" scrollbarMode="showOnDemand" scrollbarWidth="6">
-            <convert type="TemplatedMultiContent">
-							{"template": [ MultiContentEntryText(pos = (0,0),size = (1035,42),flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER,text = 0) ],
-							"fonts": [gFont("Regular",34)],
-							"itemHeight": 42 }
-						</convert>
-          </widget>
-        </panel>
-      </panel>
-    </panel>
-  </screen>
-  <!-- Language wizard -->
-  <screen name="LanguageWizard" position="0,0" size="1920,1080" flags="wfNoBorder">
-    <panel name="Background" />
-    <panel name="WizardMarginsTemplate" />
-    <panel name="RemoteControlTemplate" />
-    <panel position="left" size="10,30" />
-    <panel position="right" size="10,30" />
-    <panel position="0,0" size="1920,1080">
-      <widget name="text" position="top" size="400,240" font="Regular;34" valign="center" />
-      <panel position="bottom" size="50,50" />
-      <widget source="languages" render="Listbox" position="0,0" size="1920,1080" scrollbarMode="showOnDemand" scrollbarWidth="6">
-        <convert type="TemplatedMultiContent">
-					{"template": [
-							MultiContentEntryText(pos = (80, 10), size = (280, 50), flags = RT_HALIGN_LEFT, text = 1), # index 1 is the language name,
-							MultiContentEntryPixmap(pos = (10, 5), size = (60, 40), png = 2), # index 2 is the pixmap
-						],
-					"fonts": [gFont("Regular", 30)],
-					"itemHeight": 50
-					}
-				</convert>
-      </widget>
-    </panel>
-  </screen>
-  <screen name="InstallWizardOpkgUpdater" position="0,0" size="1920,1080" flags="wfNoBorder">
-    <panel name="Background" />
-    <panel name="WizardMarginsTemplate" />
-    <panel position="top" size="*,100" />
-    <panel name="RemoteControlTemplate" />
-    <panel position="left" size="10,*" />
-    <panel position="right" size="10,*" />
-    <widget source="statusbar" render="Label" position="0,0" size="1920,1080" zPosition="10" halign="center" valign="center" font="Regular;34" transparent="1" />
-  </screen>
-  <!-- ImageWizard -->
   <screen name="ImageWizard" position="0,0" size="1920,1080" flags="wfNoBorder">
     <panel name="Background" />
     <panel name="PigTemplate" />
