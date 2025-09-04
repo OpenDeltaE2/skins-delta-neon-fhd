@@ -1835,8 +1835,6 @@
   <screen name="CleanupWizard" title="Cleanup Wizard" backgroundColor="transparent" flags="wfNoBorder" position="0,0" size="1920,1080">
   <panel name="Background" />
   <panel name="TopTemplate" />
-  <panel name="ButtonTemplate" />
-  <panel name="wizard_rc_templateNew" />  
   <!--  Widgets -->
   <widget name="text" font="Regular2; 28" position="45,125" size="900,400" backgroundColor="transparent" foregroundColor="white" transparent="1" halign="left" valign="center" zPosition="1" />
   <eLabel backgroundColor="transparent" position="45,539" size="900,3" zPosition="2" foregroundColor="yellow" />
@@ -1848,17 +1846,30 @@
   </widget>
   <widget name="config" itemHeight="50" scrollbarMode="showOnDemand" scrollbarWidth="8" scrollbarSliderForegroundColor="blue" enableWrapAround="1" backgroundColor="transparent" foregroundColor="white" position="3650,555" size="900,400" transparent="1" zPosition="0" />
   <!--  Buttons  -->
-  <ePixmap alphatest="blend" pixmap="delta-neon-fhd/buttons/button_red.png" zPosition="10" position="365,1027" size="230,8" />
-  <ePixmap alphatest="blend" pixmap="delta-neon-fhd/buttons/button_green.png" zPosition="10" position="620,1027" size="230,8" />
-  <ePixmap alphatest="blend" pixmap="delta-neon-fhd/buttons/button_yellow.png" zPosition="10" position="875,1027" size="230,8" />
-  <ePixmap alphatest="blend" pixmap="delta-neon-fhd/buttons/button_blue.png" zPosition="10" position="1130,1027" size="230,8" />
-  <widget backgroundColor="transparent" font="Regular2; 28" halign="center" source="key_red" render="Label" name="languagetext" position="365,988" size="230,40" transparent="1" zPosition="1" />
-  <!-- ######  -->
+<screen name="ButtonRed">
+  <panel name="ButtonGraphicRed" />
+  <panel name="ButtonTextRed" />
+</screen>
+
+<screen name="ButtonGreen">
+  <panel name="ButtonGraphicGreen" />
+  <panel name="ButtonTextGreen" />
+</screen>
+
+<screen name="ButtonYellow">
+  <panel name="ButtonGraphicYellow" />
+  <panel name="ButtonTextYellow" />
+</screen>
+
+<screen name="ButtonBlue">
+  <panel name="ButtonGraphicBlue" />
+  <panel name="ButtonTextBlue" />
+</screen> 
+<!-- ######  -->
 </screen>
   <screen name="DefaultSatLists" title="Default SatLists" backgroundColor="transparent" flags="wfNoBorder" position="center,center" size="1920,1080">
   <panel name="Background" />
   <panel name="TopTemplate" />
-  <panel name="ButtonTemplate" />
   <!--  Widgets -->
   <widget name="text" font="Regular2; 28" position="45,125" size="900,400" backgroundColor="XEDarkBlueA" foregroundColor="white" transparent="1" halign="left" valign="center" zPosition="1" />
   <eLabel backgroundColor="transparent" position="45,539" size="900,3" zPosition="2" foregroundColor="ywllow" />
@@ -1870,17 +1881,30 @@
   </widget>
   <widget name="config" itemHeight="50" scrollbarMode="showOnDemand" scrollbarWidth="8" scrollbarSliderForegroundColor="blue" enableWrapAround="1" backgroundColor="transparent" foregroundColor="white" position="45,555" size="900,400" transparent="1" zPosition="0" />
   <!--  Buttons  -->
-  <ePixmap alphatest="blend" pixmap="delta-neon-fhd/buttons/button_red.png" zPosition="10" position="365,1027" size="230,8" />
-  <ePixmap alphatest="blend" pixmap="delta-neon-fhd/buttons/button_green.png" zPosition="10" position="620,1027" size="230,8" />
-  <ePixmap alphatest="blend" pixmap="delta-neon-fhd/buttons/button_yellow.png" zPosition="10" position="875,1027" size="230,8" />
-  <ePixmap alphatest="blend" pixmap="delta-neon-fhd/buttons/button_blue.png" zPosition="10" position="1130,1027" size="230,8" />
-  <widget backgroundColor="transparent" font="Regular2; 28" halign="center" source="key_red" render="Label" name="languagetext" position="365,988" size="230,40" transparent="1" zPosition="1" />
+<screen name="ButtonRed">
+  <panel name="ButtonGraphicRed" />
+  <panel name="ButtonTextRed" />
+</screen>
 
+<screen name="ButtonGreen">
+  <panel name="ButtonGraphicGreen" />
+  <panel name="ButtonTextGreen" />
+</screen>
+
+<screen name="ButtonYellow">
+  <panel name="ButtonGraphicYellow" />
+  <panel name="ButtonTextYellow" />
+</screen>
+
+<screen name="ButtonBlue">
+  <panel name="ButtonGraphicBlue" />
+  <panel name="ButtonTextBlue" />
+</screen> 
+<!-- ######  -->
 </screen>
   <screen name="DefaultWizard" title="Default Wizard" backgroundColor="transparent" flags="wfNoBorder" position="center,center" size="1920,1080">
   <panel name="Background" />
   <panel name="TopTemplate" />
-  <panel name="ButtonTemplate" />
   <!--  Widgets -->
   <widget name="text" font="Regular2; 28" position="45,125" size="900,400" backgroundColor="transparent" foregroundColor="white" transparent="1" halign="left" valign="center" zPosition="1" />
   <eLabel backgroundColor="transparent" position="45,539" size="900,3" zPosition="2" foregroundColor="yellow" />
@@ -1897,12 +1921,11 @@
   <ePixmap alphatest="blend" pixmap="delta-neon-fhd/buttons/button_yellow.png" zPosition="10" position="875,1027" size="230,8" />
   <ePixmap alphatest="blend" pixmap="delta-neon-fhd/buttons/button_blue.png" zPosition="10" position="1130,1027" size="230,8" />
   <widget backgroundColor="transparent" font="Regular2; 28" halign="center" source="key_red" render="Label" name="languagetext" position="365,988" size="230,40" transparent="1" zPosition="1" />
-
 </screen>
   <screen name="ImageWizard" title="Image Wizard" backgroundColor="transparent" flags="wfNoBorder" position="0,0" size="1920,1080">
   <panel name="Background" />
   <panel name="TopTemplate" />
-  <panel name="ButtonTemplate" />  <!--  Widgets -->
+  <!--  Widgets -->
   <widget name="text" font="Regular2; 28" position="45,125" size="900,400" backgroundColor="transparent" foregroundColor="white" transparent="1" halign="left" valign="center" zPosition="1" />
   <eLabel backgroundColor="transparent" position="45,539" size="900,3" zPosition="2" foregroundColor="ciel" />
   <widget source="list" render="Listbox" backgroundColor="transparent" foregroundColor="white" scrollbarMode="showOnDemand" scrollbarWidth="8" scrollbarSliderForegroundColor="blue" enableWrapAround="1" position="45,555" size="900,400" transparent="1">
@@ -1918,12 +1941,10 @@
   <ePixmap alphatest="blend" pixmap="delta-neon-fhd/buttons/button_yellow.png" zPosition="10" position="875,1027" size="230,8" />
   <ePixmap alphatest="blend" pixmap="delta-neon-fhd/buttons/button_blue.png" zPosition="10" position="1130,1027" size="230,8" />
   <widget backgroundColor="transparent" font="Regular2; 28" halign="center" source="key_red" render="Label" name="languagetext" position="365,988" size="230,40" transparent="1" zPosition="1" />
-
 </screen>
   <screen name="LanguageWizard" title="Language Wizard" backgroundColor="transparent" flags="wfNoBorder" position="0,0" size="1920,1080">
   <panel name="Background" />
   <panel name="TopTemplate" />
-  <panel name="ButtonTemplate" /> 
   <!--  Widgets -->
   <widget name="text" font="Regular2; 28" position="45,125" size="900,150" backgroundColor="transparent" foregroundColor="white" transparent="1" halign="left" valign="top" zPosition="1" />
   <eLabel backgroundColor="transparent" position="45,285" size="900,3" zPosition="2" foregroundColor="yellow" />
@@ -1944,12 +1965,10 @@
   <ePixmap alphatest="blend" pixmap="delta-neon-fhd/buttons/button_green.png" zPosition="10" position="620,1027" size="230,8" />
   <ePixmap alphatest="blend" pixmap="delta-neon-fhd/buttons/button_yellow.png" zPosition="10" position="875,1027" size="230,8" />
   <ePixmap alphatest="blend" pixmap="delta-neon-fhd/buttons/button_blue.png" zPosition="10" position="1130,1027" size="230,8" />
-
 </screen>
   <screen name="NetworkWizard" title="Wizard..." backgroundColor="transparent" flags="wfNoBorder" position="center,center" size="1920,1080">
   <panel name="Background" />
   <panel name="TopTemplate" />
-  <panel name="ButtonTemplate" />
   <!--  Widgets -->
   <widget name="text" font="Regular2; 28" position="45,125" size="900,400" backgroundColor="transparent" foregroundColor="white" transparent="1" halign="center" valign="center" zPosition="1" />
   <eLabel backgroundColor="transparent" position="45,539" size="900,3" zPosition="2" foregroundColor="yellow" />
@@ -1966,12 +1985,10 @@
   <ePixmap alphatest="blend" pixmap="delta-neon-fhd/buttons/button_yellow.png" zPosition="10" position="875,1027" size="230,8" />
   <ePixmap alphatest="blend" pixmap="delta-neon-fhd/buttons/button_blue.png" zPosition="10" position="1130,1027" size="230,8" />
   <widget backgroundColor="transparent" font="Regular2; 28" halign="center" source="key_red" render="Label" name="languagetext" position="365,988" size="230,40" transparent="1" zPosition="1" />
-
 </screen>
   <screen name="StartWizard" title="Start Wizard" backgroundColor="transparent" flags="wfNoBorder" position="0,0" size="1920,1080">
   <panel name="Background" />
   <panel name="TopTemplate" />
-  <panel name="ButtonTemplate" />
   <!--  Widgets -->
   <widget name="text" font="Regular2; 28" position="45,125" size="900,400" backgroundColor="transparent" foregroundColor="white" transparent="1" halign="left" valign="center" zPosition="1" />
   <eLabel backgroundColor="transparent" position="45,539" size="900,3" zPosition="2" foregroundColor="yellow" />
@@ -1988,12 +2005,10 @@
   <ePixmap alphatest="blend" pixmap="delta-neon-fhd/buttons/button_yellow.png" zPosition="10" position="875,1027" size="230,8" />
   <ePixmap alphatest="blend" pixmap="delta-neon-fhd/buttons/button_blue.png" zPosition="10" position="1130,1027" size="230,8" />
   <widget backgroundColor="transparent" font="Regular2; 28" halign="center" source="key_red" render="Label" name="languagetext" position="365,988" size="230,40" transparent="1" zPosition="1" />
-
 </screen>
   <screen name="VideoWizard" title="Video Wizard" backgroundColor="transparent" flags="wfNoBorder" position="center,center" size="1920,1080">
   <panel name="Background" />
   <panel name="TopTemplate" />
-  <panel name="ButtonTemplate" />
   <!--  Widgets -->
   <widget name="text" font="Regular2; 28" position="45,125" size="900,400" backgroundColor="transparent" foregroundColor="white" transparent="1" halign="left" valign="center" zPosition="1" />
   <eLabel backgroundColor="transparent" position="45,539" size="900,3" zPosition="2" foregroundColor="yellow" />
@@ -2010,7 +2025,6 @@
   <ePixmap alphatest="blend" pixmap="delta-neon-fhd/buttons/button_yellow.png" zPosition="10" position="875,1027" size="230,8" />
   <ePixmap alphatest="blend" pixmap="delta-neon-fhd/buttons/button_blue.png" zPosition="10" position="1130,1027" size="230,8" />
   <widget backgroundColor="transparent" font="Regular2; 28" halign="center" source="key_red" render="Label" name="languagetext" position="365,988" size="230,40" transparent="1" zPosition="1" />
-
 </screen>
   <!-- ******************** -->
   <screen name="AdapterSetup" position="0,0" size="1920,1080" flags="wfNoBorder">
