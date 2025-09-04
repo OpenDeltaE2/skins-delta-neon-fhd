@@ -1831,202 +1831,164 @@
   </screen>
   <!-- Extra margin for wizard, never know how bad the TV is... -->
   <!--  ******************** WIZARDS Screen  -->
+  <screen name="WizardMarginsTemplate">
+    <panel position="left" size="10,1000" />
+    <panel position="right" size="8,100" />
+    <panel position="top" size="8,170" />
+    <panel position="bottom" size="10,900" />
+  </screen>
   <!-- Start Wizard -->
-  <screen name="CleanupWizard" title="Cleanup Wizard" backgroundColor="transparent" flags="wfNoBorder" position="0,0" size="1920,1080">
+  <screen name="RemoteControlTemplate">
+    <panel position="right" size="154,100">
+      <panel position="top" size="100,150" />
+      <widget name="rc" pixmaps="rc.png,rcold.png" position="top" zPosition="10" size="154,500" alphatest="blend" />
+      <widget name="arrowdown" pixmap="arrowdown.png" position="0,0" zPosition="11" size="37,70" transparent="1" alphatest="blend" />
+      <widget name="arrowdown2" pixmap="arrowdown.png" position="0,0" zPosition="11" size="37,70" transparent="1" alphatest="blend" />
+      <widget name="arrowup" pixmap="arrowup.png" position="-100,-100" zPosition="11" size="37,70" transparent="1" alphatest="blend" />
+      <widget name="arrowup2" pixmap="arrowup.png" position="-100,-100" zPosition="11" size="37,70" transparent="1" alphatest="blend" />
+    </panel>
+  </screen>
+  <screen name="WizardPictureLangTemplate">
+    <panel position="top" size="400,50" />
+    <panel position="top" size="700,50">
+      <ePixmap pixmap="buttons/red.png" position="left" zPosition="0" size="50,34" transparent="1" alphatest="blend" />
+      <widget name="languagetext" position="45,100" size="920,1080" font="Regular;34" />
+    </panel>
+  </screen>
+  <!-- it's the same screen... -->
+  <screen name="StartWizard" position="0,0" size="1920,1080" flags="wfNoBorder">
   <panel name="Background" />
   <panel name="TopTemplate" />
-  <!--  Widgets -->
-  <widget name="text" font="Regular2; 28" position="45,125" size="900,400" backgroundColor="transparent" foregroundColor="white" transparent="1" halign="left" valign="center" zPosition="1" />
-  <eLabel backgroundColor="transparent" position="45,539" size="900,3" zPosition="2" foregroundColor="yellow" />
-  <widget source="list" render="Listbox" backgroundColor="transparent" foregroundColor="white" scrollbarMode="showOnDemand" scrollbarWidth="8" scrollbarSliderForegroundColor="blue" enableWrapAround="1" position="45,555" size="900,400" transparent="1">
-    <convert type="TemplatedMultiContent">
-                {"template":[ MultiContentEntryText(pos=(20,2),size=(1020,45),flags=RT_HALIGN_LEFT,text=0) ],
-                "fonts":[gFont("Regular2",28) ],"itemHeight":50}
-            </convert>
-  </widget>
-  <widget name="config" itemHeight="50" scrollbarMode="showOnDemand" scrollbarWidth="8" scrollbarSliderForegroundColor="blue" enableWrapAround="1" backgroundColor="transparent" foregroundColor="white" position="3650,555" size="900,400" transparent="1" zPosition="0" />
-  <!--  Buttons  -->
-<screen name="ButtonRed">
-  <panel name="ButtonGraphicRed" />
-  <panel name="ButtonTextRed" />
+  <panel name="DefaultWizard" />
 </screen>
-
-<screen name="ButtonGreen">
-  <panel name="ButtonGraphicGreen" />
-  <panel name="ButtonTextGreen" />
-</screen>
-
-<screen name="ButtonYellow">
-  <panel name="ButtonGraphicYellow" />
-  <panel name="ButtonTextYellow" />
-</screen>
-
-<screen name="ButtonBlue">
-  <panel name="ButtonGraphicBlue" />
-  <panel name="ButtonTextBlue" />
-</screen> 
-<!-- ######  -->
-</screen>
-  <screen name="DefaultSatLists" title="Default SatLists" backgroundColor="transparent" flags="wfNoBorder" position="center,center" size="1920,1080">
+  <!-- Default wizard -->
+  <screen name="DefaultWizard" position="0,0" size="1920,1080" flags="wfNoBorder">
   <panel name="Background" />
   <panel name="TopTemplate" />
-  <!--  Widgets -->
-  <widget name="text" font="Regular2; 28" position="45,125" size="900,400" backgroundColor="XEDarkBlueA" foregroundColor="white" transparent="1" halign="left" valign="center" zPosition="1" />
-  <eLabel backgroundColor="transparent" position="45,539" size="900,3" zPosition="2" foregroundColor="ywllow" />
-  <widget source="list" render="Listbox" backgroundColor="transparent" foregroundColor="white" scrollbarMode="showOnDemand" scrollbarWidth="8" scrollbarSliderForegroundColor="blue" enableWrapAround="1" position="45,555" size="900,400" transparent="1">
-    <convert type="TemplatedMultiContent">
-                {"template":[ MultiContentEntryText(pos=(20,2),size=(1020,45),flags=RT_HALIGN_LEFT,text=0) ],
-                "fonts":[gFont("Regular2",28) ],"itemHeight":50}
-            </convert>
-  </widget>
-  <widget name="config" itemHeight="50" scrollbarMode="showOnDemand" scrollbarWidth="8" scrollbarSliderForegroundColor="blue" enableWrapAround="1" backgroundColor="transparent" foregroundColor="white" position="45,555" size="900,400" transparent="1" zPosition="0" />
-  <!--  Buttons  -->
-<screen name="ButtonRed">
-  <panel name="ButtonGraphicRed" />
-  <panel name="ButtonTextRed" />
+  <panel name="WizardMarginsTemplate" />
+  <panel name="WizardPictureLangTemplate" />
+  <panel name="RemoteControlTemplate" />
+  <panel position="left" size="10,100" />
+  <panel position="right" size="10,100" />
+  <panel position="0,0" size="920,1080">
+    <widget name="text" position="top" size="*,400" font="Regular;34" valign="center" />
+    <widget position="bottom" size="50,50" />
+    <panel position="100,200" size="920,800" layout="stack">
+      <widget source="list" render="Listbox" position="45,100" size="920,880" scrollbarMode="showOnDemand" scrollbarWidth="6">
+        <convert type="TemplatedMultiContent">
+						{"template": [ MultiContentEntryText(pos = (0,0),size = (1035,42),flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER,text = 0) ],
+						"fonts": [gFont("Regular",34)],
+						"itemHeight": 42 }
+					</convert>
+      </widget>
+      <widget name="config" position="0,0" size="1300,502" zPosition="1" itemHeight="38" font="Regular;28" scrollbarMode="showOnDemand" scrollbarWidth="6" transparent="1" />
+    </panel>
+  </panel>
 </screen>
-
-<screen name="ButtonGreen">
-  <panel name="ButtonGraphicGreen" />
-  <panel name="ButtonTextGreen" />
-</screen>
-
-<screen name="ButtonYellow">
-  <panel name="ButtonGraphicYellow" />
-  <panel name="ButtonTextYellow" />
-</screen>
-
-<screen name="ButtonBlue">
-  <panel name="ButtonGraphicBlue" />
-  <panel name="ButtonTextBlue" />
-</screen> 
-<!-- ######  -->
-</screen>
-  <screen name="DefaultWizard" title="Default Wizard" backgroundColor="transparent" flags="wfNoBorder" position="center,center" size="1920,1080">
+  <!-- Video wizard -->
+  <screen name="VideoWizard" position="0,0" size="1920,1080" flags="wfNoBorder">
   <panel name="Background" />
   <panel name="TopTemplate" />
-  <!--  Widgets -->
-  <widget name="text" font="Regular2; 28" position="45,125" size="900,400" backgroundColor="transparent" foregroundColor="white" transparent="1" halign="left" valign="center" zPosition="1" />
-  <eLabel backgroundColor="transparent" position="45,539" size="900,3" zPosition="2" foregroundColor="yellow" />
-  <widget source="list" render="Listbox" backgroundColor="transparent" foregroundColor="white" scrollbarMode="showOnDemand" scrollbarWidth="8" scrollbarSliderForegroundColor="blue" enableWrapAround="1" position="45,555" size="900,400" transparent="1">
-    <convert type="TemplatedMultiContent">
-                {"template":[ MultiContentEntryText(pos=(20,2),size=(1020,45),flags=RT_HALIGN_LEFT,text=0) ],
-                "fonts":[gFont("Regular2",28) ],"itemHeight":50}
-            </convert>
-  </widget>
-  <widget name="config" itemHeight="50" scrollbarMode="showOnDemand" scrollbarWidth="8" scrollbarSliderForegroundColor="blue" enableWrapAround="1" backgroundColor="transparent" foregroundColor="white" position="45,555" size="900,400" transparent="1" zPosition="0" />
-  <!--  Buttons  -->
-  <ePixmap alphatest="blend" pixmap="delta-neon-fhd/buttons/button_red.png" zPosition="10" position="365,1027" size="230,8" />
-  <ePixmap alphatest="blend" pixmap="delta-neon-fhd/buttons/button_green.png" zPosition="10" position="620,1027" size="230,8" />
-  <ePixmap alphatest="blend" pixmap="delta-neon-fhd/buttons/button_yellow.png" zPosition="10" position="875,1027" size="230,8" />
-  <ePixmap alphatest="blend" pixmap="delta-neon-fhd/buttons/button_blue.png" zPosition="10" position="1130,1027" size="230,8" />
-  <widget backgroundColor="transparent" font="Regular2; 28" halign="center" source="key_red" render="Label" name="languagetext" position="365,988" size="230,40" transparent="1" zPosition="1" />
+  <panel name="WizardMarginsTemplate" />
+  <panel name="WizardPictureLangTemplate" />
+  <panel name="RemoteControlTemplate" />
+  <panel position="left" size="10,100" />
+  <panel position="right" size="10,100" />
+  <panel position="110,100" size="920,1080">
+    <widget name="text" position="top" size="*,400" font="Regular;34" valign="center" />
+    <panel position="500,200" size="920,800">
+      <panel position="left" size="150,100">
+        <widget name="portpic" position="top" zPosition="10" size="150,150" transparent="1" alphatest="on" />
+      </panel>
+      <panel position="100,100" size="920,1080" layout="stack">
+        <widget source="list" render="Listbox" position="0,0" size="920,1080" font="Regular;34" scrollbarMode="showOnDemand" scrollbarWidth="6">
+          <convert type="TemplatedMultiContent">
+							{"template": [ MultiContentEntryText(pos = (0,0),size = (1035,42),flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER,text = 0) ],
+							"fonts": [gFont("Regular",34)],
+							"itemHeight": 42 }
+						</convert>
+        </widget>
+      </panel>
+    </panel>
+  </panel>
 </screen>
-  <screen name="ImageWizard" title="Image Wizard" backgroundColor="transparent" flags="wfNoBorder" position="0,0" size="1920,1080">
+  <!-- Language wizard -->
+  <screen name="LanguageWizard" position="0,0" size="1920,1080" flags="wfNoBorder">
   <panel name="Background" />
   <panel name="TopTemplate" />
-  <!--  Widgets -->
-  <widget name="text" font="Regular2; 28" position="45,125" size="900,400" backgroundColor="transparent" foregroundColor="white" transparent="1" halign="left" valign="center" zPosition="1" />
-  <eLabel backgroundColor="transparent" position="45,539" size="900,3" zPosition="2" foregroundColor="ciel" />
-  <widget source="list" render="Listbox" backgroundColor="transparent" foregroundColor="white" scrollbarMode="showOnDemand" scrollbarWidth="8" scrollbarSliderForegroundColor="blue" enableWrapAround="1" position="45,555" size="900,400" transparent="1">
-    <convert type="TemplatedMultiContent">
-                {"template":[ MultiContentEntryText(pos=(20,2),size=(1020,45),flags=RT_HALIGN_LEFT,text=0) ],
-                "fonts":[gFont("Regular2",28) ],"itemHeight":50}
-            </convert>
-  </widget>
-  <widget name="config" itemHeight="50" scrollbarMode="showOnDemand" scrollbarWidth="8" scrollbarSliderForegroundColor="blue" enableWrapAround="1" backgroundColor="transparent" foregroundColor="white" position="45,555" size="900,400" transparent="1" zPosition="0" />
-  <!--  Buttons  -->
-  <ePixmap alphatest="blend" pixmap="delta-neon-fhd/buttons/button_red.png" zPosition="10" position="365,1027" size="230,8" />
-  <ePixmap alphatest="blend" pixmap="delta-neon-fhd/buttons/button_green.png" zPosition="10" position="620,1027" size="230,8" />
-  <ePixmap alphatest="blend" pixmap="delta-neon-fhd/buttons/button_yellow.png" zPosition="10" position="875,1027" size="230,8" />
-  <ePixmap alphatest="blend" pixmap="delta-neon-fhd/buttons/button_blue.png" zPosition="10" position="1130,1027" size="230,8" />
-  <widget backgroundColor="transparent" font="Regular2; 28" halign="center" source="key_red" render="Label" name="languagetext" position="365,988" size="230,40" transparent="1" zPosition="1" />
+  <panel name="WizardMarginsTemplate" />
+  <panel name="RemoteControlTemplate" />
+  <panel position="left" size="10,100" />
+  <panel position="right" size="10,100" />
+  <panel position="0,0" size="920,1080">
+    <widget name="text" position="top" size="100,240" font="Regular;34" valign="center" />
+    <panel position="bottom" size="50,50" />
+    <widget source="languages" render="Listbox" position="0,0" size="920,1080" scrollbarMode="showOnDemand" scrollbarWidth="6">
+      <convert type="TemplatedMultiContent">
+					{"template": [
+							MultiContentEntryText(pos = (80, 10), size = (280, 50), flags = RT_HALIGN_LEFT, text = 1), # index 1 is the language name,
+							MultiContentEntryPixmap(pos = (10, 5), size = (60, 40), png = 2), # index 2 is the pixmap
+						],
+					"fonts": [gFont("Regular", 30)],
+					"itemHeight": 50
+					}
+				</convert>
+    </widget>
+  </panel>
 </screen>
-  <screen name="LanguageWizard" title="Language Wizard" backgroundColor="transparent" flags="wfNoBorder" position="0,0" size="1920,1080">
+  <screen name="InstallWizardOpkgUpdater" position="0,0" size="1920,1080" flags="wfNoBorder">
   <panel name="Background" />
   <panel name="TopTemplate" />
-  <!--  Widgets -->
-  <widget name="text" font="Regular2; 28" position="45,125" size="900,150" backgroundColor="transparent" foregroundColor="white" transparent="1" halign="left" valign="top" zPosition="1" />
-  <eLabel backgroundColor="transparent" position="45,285" size="900,3" zPosition="2" foregroundColor="yellow" />
-  <widget source="list" render="Listbox" backgroundColor="transparent" foregroundColor="white" scrollbarMode="showOnDemand" scrollbarWidth="8" scrollbarSliderForegroundColor="blue" enableWrapAround="1" position="45,300" size="900,650" transparent="1">
-    <convert type="TemplatedMultiContent">
-                {"template": [
-                MultiContentEntryText(pos = (150,15),size = (560,50),flags = RT_HALIGN_LEFT,text = 1),# index 1 is the language name,
-                MultiContentEntryPixmap(pos = (20,2),size = (90,60),png = 2),# index 2 is the pixmap
-                ],
-                "fonts": [gFont("Regular2",28)],
-                "itemHeight": 65
-                }
-            </convert>
-  </widget>
-  <widget name="config" itemHeight="50" scrollbarMode="showOnDemand" scrollbarWidth="8" scrollbarSliderForegroundColor="blue" enableWrapAround="1" backgroundColor="transparent" foregroundColor="white" position="45,300" size="900,650" transparent="1" zPosition="0" />
-  <!--  Buttons  -->
-  <ePixmap alphatest="blend" pixmap="delta-neon-fhd/buttons/button_red.png" zPosition="10" position="365,1027" size="230,8" />
-  <ePixmap alphatest="blend" pixmap="delta-neon-fhd/buttons/button_green.png" zPosition="10" position="620,1027" size="230,8" />
-  <ePixmap alphatest="blend" pixmap="delta-neon-fhd/buttons/button_yellow.png" zPosition="10" position="875,1027" size="230,8" />
-  <ePixmap alphatest="blend" pixmap="delta-neon-fhd/buttons/button_blue.png" zPosition="10" position="1130,1027" size="230,8" />
+  <panel name="WizardMarginsTemplate" />
+  <panel position="top" size="0,100" />
+  <panel name="RemoteControlTemplate" />
+  <panel position="left" size="10,100" />
+  <panel position="right" size="10,100" />
+  <widget source="statusbar" render="Label" position="0,0" size="920,1080" zPosition="10" halign="center" valign="center" font="Regular;34" transparent="1" />
 </screen>
-  <screen name="NetworkWizard" title="Wizard..." backgroundColor="transparent" flags="wfNoBorder" position="center,center" size="1920,1080">
+  <!-- ImageWizard -->
+  <screen name="ImageWizard" position="0,0" size="1920,1080" flags="wfNoBorder">
   <panel name="Background" />
   <panel name="TopTemplate" />
-  <!--  Widgets -->
-  <widget name="text" font="Regular2; 28" position="45,125" size="900,400" backgroundColor="transparent" foregroundColor="white" transparent="1" halign="center" valign="center" zPosition="1" />
-  <eLabel backgroundColor="transparent" position="45,539" size="900,3" zPosition="2" foregroundColor="yellow" />
-  <widget source="list" render="Listbox" backgroundColor="transparent" foregroundColor="white" scrollbarMode="showOnDemand" scrollbarWidth="8" scrollbarSliderForegroundColor="blue" enableWrapAround="1" position="45,555" size="900,400" transparent="1">
-    <convert type="TemplatedMultiContent">
-                {"template":[ MultiContentEntryText(pos=(20,2),size=(1020,45),flags=RT_HALIGN_LEFT,text=0) ],
-                "fonts":[gFont("Regular2",28) ],"itemHeight":50}
-            </convert>
+  <panel name="PigTemplate" />
+  <eLabel text="Welcome..." position="30,7" size="1830,75" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;36" valign="center" halign="left" />
+  <widget name="text" position="1090,153" size="510,495" font="Regular;33" />
+  <widget source="list" render="Listbox" position="864,661" size="735,270" scrollbarMode="showOnDemand" scrollbarWidth="6">
+    <convert type="StringList" />
   </widget>
-  <widget name="config" itemHeight="50" scrollbarMode="showOnDemand" scrollbarWidth="8" scrollbarSliderForegroundColor="blue" enableWrapAround="1" backgroundColor="transparent" foregroundColor="white" position="45,555" size="900,400" transparent="1" zPosition="0" />
-  <!--  Buttons  -->
-  <ePixmap alphatest="blend" pixmap="delta-neon-fhd/buttons/button_red.png" zPosition="10" position="365,1027" size="230,8" />
-  <ePixmap alphatest="blend" pixmap="delta-neon-fhd/buttons/button_green.png" zPosition="10" position="620,1027" size="230,8" />
-  <ePixmap alphatest="blend" pixmap="delta-neon-fhd/buttons/button_yellow.png" zPosition="10" position="875,1027" size="230,8" />
-  <ePixmap alphatest="blend" pixmap="delta-neon-fhd/buttons/button_blue.png" zPosition="10" position="1130,1027" size="230,8" />
-  <widget backgroundColor="transparent" font="Regular2; 28" halign="center" source="key_red" render="Label" name="languagetext" position="365,988" size="230,40" transparent="1" zPosition="1" />
+  <widget name="config" position="127,655" size="637,270" itemHeight="38" font="Regular;28" transparent="1" zPosition="1" scrollbarMode="showOnDemand" scrollbarWidth="6" />
+  <ePixmap pixmap="buttons/red.png" position="810,485" size="34,34" alphatest="on" />
+  <widget name="languagetext" position="860,485" size="165,34" font="Regular;28" />
+  <widget name="wizard" pixmap="wizard.png" position="811,120" size="165,261" zPosition="10" alphatest="on" />
+  <widget name="rc" position="1623,148" size="231,750" zPosition="10" pixmaps="rc.png,rcold.png" alphatest="on" />
 </screen>
-  <screen name="StartWizard" title="Start Wizard" backgroundColor="transparent" flags="wfNoBorder" position="0,0" size="1920,1080">
-  <panel name="Background" />
+  <screen name="SoftwareManagerInfo" title="SoftwareManager information" position="0,0" size="1920,1080" flags="wfNoBorder">
   <panel name="TopTemplate" />
-  <!--  Widgets -->
-  <widget name="text" font="Regular2; 28" position="45,125" size="900,400" backgroundColor="transparent" foregroundColor="white" transparent="1" halign="left" valign="center" zPosition="1" />
-  <eLabel backgroundColor="transparent" position="45,539" size="900,3" zPosition="2" foregroundColor="yellow" />
-  <widget source="list" render="Listbox" backgroundColor="transparent" foregroundColor="white" scrollbarMode="showOnDemand" scrollbarWidth="8" scrollbarSliderForegroundColor="blue" enableWrapAround="1" position="45,555" size="900,400" transparent="1">
-    <convert type="TemplatedMultiContent">
-                {"template":[ MultiContentEntryText(pos=(20,2),size=(1020,45),flags=RT_HALIGN_LEFT,text=0) ],
-                "fonts":[gFont("Regular2",28) ],"itemHeight":50}
-            </convert>
-  </widget>
-  <widget name="config" itemHeight="50" scrollbarMode="showOnDemand" scrollbarWidth="8" scrollbarSliderForegroundColor="blue" enableWrapAround="1" backgroundColor="transparent" foregroundColor="white" position="45,555" size="900,400" transparent="1" zPosition="0" />
-  <!--  Buttons  -->
-  <ePixmap alphatest="blend" pixmap="delta-neon-fhd/buttons/button_red.png" zPosition="10" position="365,1027" size="230,8" />
-  <ePixmap alphatest="blend" pixmap="delta-neon-fhd/buttons/button_green.png" zPosition="10" position="620,1027" size="230,8" />
-  <ePixmap alphatest="blend" pixmap="delta-neon-fhd/buttons/button_yellow.png" zPosition="10" position="875,1027" size="230,8" />
-  <ePixmap alphatest="blend" pixmap="delta-neon-fhd/buttons/button_blue.png" zPosition="10" position="1130,1027" size="230,8" />
-  <widget backgroundColor="transparent" font="Regular2; 28" halign="center" source="key_red" render="Label" name="languagetext" position="365,988" size="230,40" transparent="1" zPosition="1" />
-</screen>
-  <screen name="VideoWizard" title="Video Wizard" backgroundColor="transparent" flags="wfNoBorder" position="center,center" size="1920,1080">
   <panel name="Background" />
-  <panel name="TopTemplate" />
-  <!--  Widgets -->
-  <widget name="text" font="Regular2; 28" position="45,125" size="900,400" backgroundColor="transparent" foregroundColor="white" transparent="1" halign="left" valign="center" zPosition="1" />
-  <eLabel backgroundColor="transparent" position="45,539" size="900,3" zPosition="2" foregroundColor="yellow" />
-  <widget source="list" render="Listbox" backgroundColor="transparent" foregroundColor="white" scrollbarMode="showOnDemand" scrollbarWidth="8" scrollbarSliderForegroundColor="blue" enableWrapAround="1" position="45,555" size="900,400" transparent="1">
+  <panel name="PigTemplate" />
+  <widget source="list" render="Listbox" position="780,100" size="1110,912" scrollbarMode="showOnDemand" scrollbarWidth="6" selectionDisabled="0">
     <convert type="TemplatedMultiContent">
-                {"template":[ MultiContentEntryText(pos=(20,2),size=(1020,45),flags=RT_HALIGN_LEFT,text=0) ],
-                "fonts":[gFont("Regular2",28) ],"itemHeight":50}
-            </convert>
+			{"template": [
+					MultiContentEntryText(pos = (0,0), size = (1080,39), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
+					],
+			"fonts": [gFont("Regular",28),gFont("Regular",30)],
+			"itemHeight": 38
+			}
+		</convert>
   </widget>
-  <widget name="config" itemHeight="50" scrollbarMode="showOnDemand" scrollbarWidth="8" scrollbarSliderForegroundColor="blue" enableWrapAround="1" backgroundColor="transparent" foregroundColor="white" position="45,555" size="900,400" transparent="1" zPosition="0" />
-  <!--  Buttons  -->
-  <ePixmap alphatest="blend" pixmap="delta-neon-fhd/buttons/button_red.png" zPosition="10" position="365,1027" size="230,8" />
-  <ePixmap alphatest="blend" pixmap="delta-neon-fhd/buttons/button_green.png" zPosition="10" position="620,1027" size="230,8" />
-  <ePixmap alphatest="blend" pixmap="delta-neon-fhd/buttons/button_yellow.png" zPosition="10" position="875,1027" size="230,8" />
-  <ePixmap alphatest="blend" pixmap="delta-neon-fhd/buttons/button_blue.png" zPosition="10" position="1130,1027" size="230,8" />
-  <widget backgroundColor="transparent" font="Regular2; 28" halign="center" source="key_red" render="Label" name="languagetext" position="365,988" size="230,40" transparent="1" zPosition="1" />
+  <widget source="introduction" render="Label" position="30,560" size="720,34" zPosition="10" font="Regular;30" halign="left" backgroundColor="secondBG" transparent="1" />
 </screen>
   <!-- ******************** -->
+  <screen name="AdapterSetupConfiguration" position="0,0" size="1920,1080" flags="wfNoBorder">
+    <panel name="Background" />
+    <panel name="PigTemplate" />
+    <widget name="menulist" position="780,105" size="1110,456" itemHeight="38" font="Regular;28" zPosition="10" scrollbarMode="showOnDemand" scrollbarWidth="6" />
+    <widget source="description" render="Label" position="780,547" size="1110,300" transparent="1" font="Regular;31" valign="center" halign="center" />
+    <widget source="IFtext" render="Label" position="1270,880" size="247,37" transparent="1" zPosition="10" font="Regular;31" halign="right" />
+    <widget source="IF" render="Label" position="1530,880" size="375,37" transparent="1" zPosition="10" font="Regular;31" halign="left" />
+    <widget source="Statustext" render="Label" position="742,880" size="300,34" transparent="1" zPosition="10" font="Regular;30" valign="center" halign="right" />
+    <widget name="statuspic" position="1055,877" size="52,37" transparent="1" zPosition="10" pixmaps="icons/lock_on.png,icons/lock_off.png" alphatest="on" />
+  </screen>
   <screen name="AdapterSetup" position="0,0" size="1920,1080" flags="wfNoBorder">
     <panel name="Background" />
     <panel name="PigTemplate" />
