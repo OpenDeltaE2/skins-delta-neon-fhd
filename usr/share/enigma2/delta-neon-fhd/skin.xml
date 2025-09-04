@@ -199,7 +199,7 @@
   </screen>
   <!-- Template Background -->
   <screen name="Background">
-    <ePixmap position="0,0" size="1920,1078" zPosition="-2" pixmap="delta-neon-fhd/infobar/bg-infobar1.png" alphatest="off" transparent="1" />
+    <ePixmap position="0,0" size="1920,1080" zPosition="-2" pixmap="delta-neon-fhd/infobar/bg-infobar1.png" alphatest="off" transparent="1" />
   </screen>
   <!-- -->
   <screen name="TopTemplate">
@@ -1840,7 +1840,7 @@
 </screen>
   <screen name="WizardPictureLangTemplate">
     <ePixmap pixmap="buttons/red.png" position="38,103" zPosition="0" size="50,34" transparent="1" alphatest="blend" />
-    <widget name="languagetext" position="91,100" size="920,40" font="Regular;34" transparent="1" />
+    <widget name="languagetext" position="90,100" size="450,40" font="Regular;34" transparent="1" />
 </screen>
   <!-- it's the same screen... -->
   <screen name="StartWizard" position="0,0" size="1920,1080" flags="wfNoBorder">
@@ -1854,16 +1854,16 @@
   <panel name="TopTemplate" />
   <panel name="WizardPictureLangTemplate" />
   <panel name="RemoteControlTemplate" />
-    <widget name="text" position="1162,-206" size="400,50" font="Regular;34" valign="center" transparent="1" />
+    <widget name="text" position="612,-237" size="450,40" font="Regular;34" valign="center" transparent="1" />
     <widget position="1198,557" size="50,50" transparent="1" />
-      <widget source="list" render="Listbox" position="75,210" size="997,416" transparent="1" scrollbarMode="showOnDemand" scrollbarWidth="6">
+      <widget source="list" render="Listbox" position="64,240" size="1000,400" transparent="1" scrollbarMode="showOnDemand" scrollbarWidth="6">
         <convert type="TemplatedMultiContent">
 						{"template": [ MultiContentEntryText(pos = (0,0),size = (1035,42),flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER,text = 0) ],
 						"fonts": [gFont("Regular",34)],
 						"itemHeight": 42 }
 					</convert>
       </widget>
-      <widget name="config" position="72,-208" size="1000,401" zPosition="1" itemHeight="38" font="Regular;28" scrollbarMode="showOnDemand" scrollbarWidth="6" transparent="1" />
+      <widget name="config" position="63,-178" size="1000,400" zPosition="1" itemHeight="38" font="Regular;28" scrollbarMode="showOnDemand" scrollbarWidth="6" transparent="1" />
 </screen>
   <!-- Video wizard -->
   <screen name="VideoWizard" position="0,0" size="1920,1080" flags="wfNoBorder">
@@ -1871,9 +1871,9 @@
   <panel name="TopTemplate" />
   <panel name="WizardPictureLangTemplate" />
   <panel name="RemoteControlTemplate" />
-    <widget name="text" position="1023,100" size="800,40" font="Regular;34" valign="center" transparent="1" />
+    <widget name="text" position="556,100" size="600,40" font="Regular;34" valign="center" transparent="1" />
         <widget name="portpic" position="1212,822" zPosition="10" size="150,150" transparent="1" alphatest="on" />
-        <widget source="list" render="Listbox" position="57,155" size="1110,820" transparent="1" font="Regular;34" scrollbarMode="showOnDemand" scrollbarWidth="6">
+        <widget source="list" render="Listbox" position="45,155" size="1110,820" transparent="1" font="Regular;34" scrollbarMode="showOnDemand" scrollbarWidth="6">
           <convert type="TemplatedMultiContent">
 							{"template": [ MultiContentEntryText(pos = (0,0),size = (1035,42),flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER,text = 0) ],
 							"fonts": [gFont("Regular",34)],
