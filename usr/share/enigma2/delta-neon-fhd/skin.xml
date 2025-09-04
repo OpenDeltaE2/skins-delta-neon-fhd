@@ -1837,12 +1837,7 @@
     <panel position="bottom" size="10%,*" />
   </screen>
   <!--  ******************** WIZARDS Screen  -->
-  <screen name="CleanupWizard" title="Cleanup Wizard" backgroundColor="transparent" flags="wfNoBorder" position="center,center" size="1920,1080">
-  <panel name="Background" />
-  <panel name="PigTemplate" />
-  <panel name="BasicTemplate" />
-  <panel name="SelectionTemplate" />
-  <panel name="KeyMenuInfoTemplate" />
+
   <!--  Widgets -->
   <widget name="text" font="Regular2; 28" position="92,117" size="900,400" backgroundColor="transparent" foregroundColor="white" transparent="1" halign="left" valign="center" zPosition="1" />
   <eLabel backgroundColor="transparent" position="88,535" size="900,3" zPosition="2" foregroundColor="ciel" />
