@@ -1845,13 +1845,13 @@
   <!-- it's the same screen... -->
   <screen name="StartWizard" position="0,0" size="1920,1080" flags="wfNoBorder">
   <panel name="Background" />
-  <panel name="TopTemplate" />
+  <panel name="BasicTemplate" />
   <panel name="DefaultWizard" />
 </screen>
   <!-- Default wizard -->
   <screen name="DefaultWizard" position="-29,337" size="1920,698" flags="wfNoBorder">
   <panel name="Background" />
-  <panel name="TopTemplate" />
+  <panel name="BasicTemplate" />
   <panel name="WizardPictureLangTemplate" />
   <panel name="RemoteControlTemplate" />
     <widget name="text" position="612,-237" size="450,40" font="Regular;34" valign="center" transparent="1" />
@@ -1868,7 +1868,7 @@
   <!-- Video wizard -->
   <screen name="VideoWizard" position="0,0" size="1920,1080" flags="wfNoBorder">
   <panel name="Background" />
-  <panel name="TopTemplate" />
+  <panel name="BasicTemplate" />
   <panel name="WizardPictureLangTemplate" />
   <panel name="RemoteControlTemplate" />
     <widget name="text" position="556,100" size="600,40" font="Regular;34" valign="center" transparent="1" />
@@ -1885,7 +1885,7 @@
   <!-- Language wizard -->
   <screen name="LanguageWizard" position="0,0" size="1920,1080" flags="wfNoBorder">
   <panel name="Background" />
-  <panel name="TopTemplate" />
+  <panel name="BasicTemplate" />
   <panel name="RemoteControlTemplate" />
     <widget name="text" position="45,100" size="1110,40" font="Regular;34" valign="center" transparent="1" />
     <widget source="languages" render="Listbox" position="45,145" size="1110,820" transparent="1" scrollbarMode="showOnDemand" scrollbarWidth="6">
@@ -1902,14 +1902,14 @@
 </screen>
   <screen name="InstallWizardOpkgUpdater" position="0,0" size="1920,1080" flags="wfNoBorder">
   <panel name="Background" />
-  <panel name="TopTemplate" />
+  <panel name="BasicTemplate" />
   <panel name="RemoteControlTemplate" />
   <widget source="statusbar" render="Label" position="45,100" size="1110,870" zPosition="10" halign="center" valign="center" font="Regular;34" transparent="1" />
 </screen>
   <!-- ImageWizard -->
   <screen name="ImageWizard" position="0,0" size="1920,1080" flags="wfNoBorder">
   <panel name="Background" />
-  <panel name="TopTemplate" />
+  <panel name="BasicTemplate" />
   <panel name="PigTemplate" />
   <eLabel text="Welcome..." position="30,100" size="1830,75" backgroundColor="transparent" transparent="1" zPosition="1" font="Regular;36" valign="center" halign="left" />
   <widget name="text" position="45,180" size="1110,40" font="Regular;33" transparent="1" />
@@ -1923,7 +1923,7 @@
   <widget name="rc" position="1623,219" size="231,750" zPosition="10" pixmaps="rc.png,rcold.png" alphatest="on" transparent="1" />
 </screen>
   <screen name="SoftwareManagerInfo" title="SoftwareManager information" position="0,0" size="1920,1080" flags="wfNoBorder">
-  <panel name="TopTemplate" />
+  <panel name="BasicTemplate" />
   <panel name="Background" />
   <panel name="PigTemplate" />
   <widget source="list" render="Listbox" position="45,140" size="1110,840" scrollbarMode="showOnDemand" scrollbarWidth="6" selectionDisabled="0" transparent="1">
