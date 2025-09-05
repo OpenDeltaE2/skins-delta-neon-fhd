@@ -1880,7 +1880,9 @@
 							"itemHeight": 42 }
 						</convert>
         </widget>
-
+  <ePixmap pixmap="buttons/key_prev.png" alphatest="blend" position="30,1031" size="52,38" />
+  <ePixmap pixmap="buttons/key_next.png" alphatest="blend" position="82,1031" size="52,38" />
+  <ePixmap pixmap="buttons/key_ok.png" alphatest="blend" position="134,1031" size="52,38" />
 </screen>
   <!-- Language wizard -->
   <screen name="LanguageWizard" position="0,0" size="1920,1080" flags="wfNoBorder">
@@ -1899,6 +1901,9 @@
 					}
 				</convert>
     </widget>
+  <ePixmap pixmap="buttons/key_prev.png" alphatest="blend" position="30,1031" size="52,38" />
+  <ePixmap pixmap="buttons/key_next.png" alphatest="blend" position="82,1031" size="52,38" />
+  <ePixmap pixmap="buttons/key_ok.png" alphatest="blend" position="134,1031" size="52,38" />
 </screen>
   <screen name="InstallWizardOpkgUpdater" position="0,0" size="1920,1080" flags="wfNoBorder">
   <panel name="Background" />
